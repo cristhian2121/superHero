@@ -1,0 +1,1 @@
+export const URL_API = "http://gateway.marvel.com/v1/public/characters?apikey=50df9c7ceade12f28c5839658af6274a&hash=763d318b9381efcb7ab60a6fbc3a384e&ts=1"
