@@ -2,14 +2,12 @@ import { IncomingMessage, ServerResponse, get } from 'http';
 import { URL_API } from '../../const/variables';
 import { IService } from '../../interfaces/IServices';
 import { ISuperHero } from '../../interfaces/ISuperHero';
+import { requestProxy } from '../requestProxy';
 
-class SuperHeroService implements IService {
-    async getAll() {
-        try {
-            const resRaw = await window.fetch(URL_API);
-            return <Promise<ISuperHero>>resRaw.json()
-        } catch (error) {
-            console.log('error: ', error);
-        }
+export class SuperHeroService implements IService {    
+
+    async getAll() {        
+        const response = await requestProxy.getAll(URL_API);
+        return response
     }
 }

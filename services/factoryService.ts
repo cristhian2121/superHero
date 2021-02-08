@@ -1,11 +1,13 @@
-import { IFactoryService } from "../interfaces/IFactoryService";
-import { IService } from "../interfaces/IServices";
+import { IResponse, IService } from "../interfaces/IServices";
 
-export class FactoryService {
+export class FactoryService<T> {
 
-    service: IService;
+    private service: IService;
 
     constructor(service: IService) {
         this.service = service;
     }
+
+    getAll = (query?): Promise<IResponse> => this.service.getAll();
+
 }

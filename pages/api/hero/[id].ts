@@ -1,14 +1,11 @@
 // Folder api is required
 
-import { IncomingMessage, ServerResponse } from 'http';
-import { NextApiRequest, NextApiResponse} from 'next';
-import { example } from '../../../services';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 const test = async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
-    res.statusCode = 201;
+    const { id } = req.query;
     res.setHeader('Content-type', 'application/json')
     res.end(JSON.stringify({ test: true }))
-    example
 }
 
 export default test;
