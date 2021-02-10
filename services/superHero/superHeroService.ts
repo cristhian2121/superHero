@@ -8,6 +8,8 @@ export class SuperHeroService implements IService {
 
     async getAll() {        
         const response = await requestProxy.getAll(URL_API);
+        console.log('URL_API: ', URL_API);
+        console.log('response: ', response);
         return response
     }
 }

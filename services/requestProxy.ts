@@ -1,16 +1,14 @@
-import p from 'phin';
+import axios from 'axios';
 import { errorRequest, successRequest } from '../utils';
 
 export const requestProxy = {
 
     getAll: async (url: string, options?) => {
         try {
-            const responseRaw = await p({
-                url,
-                parse: 'json'
-            });
-            return successRequest({ data: responseRaw.body })
+            const responseRaw = await axios.get(url);
+            return successRequest({ data: responseRaw.data })
         } catch (e) {
+            console.log('e: ', e);
             return errorRequest({ error: e, message: e.message })
         }
 
@@ -18,10 +16,7 @@ export const requestProxy = {
 
     getById: async (url: string, options?) => {
         try{
-            const responseRaw = await p({
-                url,
-                parse: 'json'
-            });
+            const responseRaw = await axios.get(url);
             return successRequest({ data: responseRaw })
         } catch (e) {
             return errorRequest({ error: e, message: e.message })
