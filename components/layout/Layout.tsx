@@ -1,12 +1,15 @@
 import React from 'react'
-import Navbar from '../Navbar'
+import Navbar from '@components/Navbar'
+
+// Styles in módule
+import styles from '@styles/custom.module.css'
 
 const Layout: React.FC = ({ children }) => {
     return (
         <div>
             <Navbar />
             {children}
-            <footer>This is teh footer</footer>
+            <footer className={styles.container}>This is teh footer</footer>
         </div>
     )
 }

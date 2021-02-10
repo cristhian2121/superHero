@@ -1,4 +1,4 @@
-import { IResponse, IService } from "../interfaces/IServices";
+import { IResponse, IService } from "@interfaces/IServices";
 
 export class FactoryService<T> {
 

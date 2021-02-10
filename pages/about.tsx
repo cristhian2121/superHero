@@ -5,12 +5,10 @@
  */
 
 import React from 'react'
-import Navbar from '../components/Navbar';
 
 const About = () => {
     return (
         <>
-            <Navbar />
             <h1>***************************</h1>
         </>
     )

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { errorRequest, successRequest } from '../utils';
+import { errorRequest, successRequest } from '@utils/index';
 
 export const requestProxy = {
 

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {SuperHeroService} from '../../services/superHero/superHeroService';
+import {SuperHeroService} from '@services/superHero/superHeroService';
 
 // tailwindcss styles
 import 'tailwindcss/tailwind.css';
